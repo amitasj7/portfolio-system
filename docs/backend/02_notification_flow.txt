@@ -1,0 +1,10 @@
+Contact Form (Frontend)
+        ↓
+POST /api/contact
+        ↓
+contact.controller.js
+        ↓
+1. Save Lead (MongoDB)
+2. email.service.js → Email to YOU
+3. whatsapp.service.js → WhatsApp alert
+4. Auto-reply email to sender

@@ -1,0 +1,7 @@
+Admin Login
+   ↓
+POST /api/auth/login
+   ↓
+Session stored in cookie
+   ↓
+auth.middleware.js protects admin routes

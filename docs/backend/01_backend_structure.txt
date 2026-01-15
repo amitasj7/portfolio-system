@@ -1,0 +1,45 @@
+backend/
+│
+├── src/
+│   │
+│   ├── config/                ← CONFIG (CTC: C)
+│   │   ├── env.ts             ← env loader
+│   │   ├── db.ts              ← MongoDB connection
+│   │   └── session.ts         ← session & cookie setup
+│   │
+│   ├── models/                ← DATABASE (CTC: C)
+│   │   ├── Profile.model.ts
+│   │   ├── Project.model.ts
+│   │   ├── Resume.model.ts
+│   │   ├── Education.model.ts
+│   │   └── Lead.model.ts
+│   │
+│   ├── routes/                ← TRANSPORT (CTC: T)
+│   │   ├── auth.routes.ts
+│   │   ├── profile.routes.ts
+│   │   ├── project.routes.ts
+│   │   ├── resume.routes.ts
+│   │   └── contact.routes.ts
+│   │
+│   ├── controllers/           ← CONTROL (CTC: C)
+│   │   ├── auth.controller.ts
+│   │   ├── profile.controller.ts
+│   │   ├── project.controller.ts
+│   │   ├── resume.controller.ts
+│   │   └── contact.controller.ts
+│   │
+│   ├── services/              ← INTERNAL SERVICES
+│   │   ├── email.service.ts
+│   │   ├── whatsapp.service.ts
+│   │   └── upload.service.ts
+│   │
+│   ├── middlewares/
+│   │   ├── auth.middleware.ts
+│   │   └── error.middleware.ts
+│   │
+│   ├── app.ts                 ← Express app setup
+│   └── server.ts              ← Server entry point
+│
+├── .env
+├── package.json
+└── tsconfig.json

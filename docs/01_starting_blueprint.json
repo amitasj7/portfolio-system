@@ -1,0 +1,164 @@
+{
+  "project_name": "Professional Engineer Portfolio",
+  "goal": "Build HR trust, generate opportunities, show engineering maturity",
+  "version": "v1-core-only",
+
+  "architecture": {
+    "type": "separate-projects",
+    "reason": "Frontend redesigns, backend reuse, long-term scalability",
+    "projects": {
+      "frontend": "Public portfolio (HR-facing)",
+      "backend": "Admin + CMS + APIs + notifications"
+    }
+  },
+
+  "tech_stack": {
+    "frontend": {
+      "framework": "Next.js (App Router)",
+      "styling": "Tailwind CSS",
+      "animation": "Framer Motion",
+      "rendering": "SSG + ISR",
+      "purpose": "Fast, SEO-friendly, high-polish UI"
+    },
+    "backend": {
+      "runtime": "Node.js",
+      "framework": "Express.js or Next.js API routes",
+      "auth": "JWT (admin only)",
+      "purpose": "CMS, APIs, notifications"
+    },
+    "database": {
+      "type": "MongoDB",
+      "reason": "Flexible schemas for projects, resume, leads"
+    },
+    "notifications": {
+      "email": "Transactional email service",
+      "whatsapp": "Webhook-based automation",
+      "auto_reply": "Thank-you message to sender"
+    }
+  },
+
+  "starting_point": {
+    "step_1": "Design data models (schemas)",
+    "step_2": "Build backend APIs",
+    "step_3": "Build admin panel",
+    "step_4": "Build public frontend",
+    "step_5": "Add animations and polish"
+  },
+
+  "core_functionality": {
+    "admin_panel": {
+      "auth": "Admin login only",
+      "profile_management": true,
+      "projects_crud": true,
+      "resume_management": true,
+      "education_experience": true,
+      "lead_management": true,
+      "notification_settings": true
+    },
+    "public_site": {
+      "hero_section": "Face + Role + Location + Value line",
+      "about_section": true,
+      "projects_section": true,
+      "skills_section": true,
+      "resume_page": true,
+      "contact_form": true,
+      "seo_and_social_preview": true
+    }
+  },
+
+  "api_routes": {
+    "auth": [
+      "POST /api/auth/login",
+      "POST /api/auth/logout"
+    ],
+    "profile": [
+      "GET /api/profile",
+      "PUT /api/profile"
+    ],
+    "projects": [
+      "GET /api/projects",
+      "POST /api/projects",
+      "PUT /api/projects/:id",
+      "DELETE /api/projects/:id"
+    ],
+    "resume": [
+      "GET /api/resume",
+      "PUT /api/resume",
+      "POST /api/resume/upload"
+    ],
+    "education_experience": [
+      "GET /api/education",
+      "POST /api/education",
+      "PUT /api/education/:id",
+      "DELETE /api/education/:id"
+    ],
+    "contact": [
+      "POST /api/contact",
+      "GET /api/leads"
+    ],
+    "notifications": [
+      "POST /api/notifications/email",
+      "POST /api/notifications/whatsapp"
+    ]
+  },
+
+  "data_models": {
+    "Profile": {
+      "name": "string",
+      "role": "string",
+      "location": "string",
+      "bio": "string",
+      "photoUrl": "string",
+      "socialLinks": "object"
+    },
+    "Project": {
+      "title": "string",
+      "description": "string",
+      "techStack": "array",
+      "githubUrl": "string",
+      "liveUrl": "string",
+      "order": "number",
+      "visible": "boolean"
+    },
+    "Resume": {
+      "htmlContent": "string",
+      "pdfUrl": "string",
+      "lastUpdated": "date"
+    },
+    "EducationExperience": {
+      "type": "education | experience",
+      "title": "string",
+      "organization": "string",
+      "duration": "string",
+      "description": "string"
+    },
+    "Lead": {
+      "name": "string",
+      "email": "string",
+      "message": "string",
+      "createdAt": "date"
+    }
+  },
+
+  "contact_flow": {
+    "step_1": "User submits contact form",
+    "step_2": "Backend saves lead to database",
+    "step_3": "Send email notification to you",
+    "step_4": "Send WhatsApp alert to you",
+    "step_5": "Auto-reply thank-you email to user"
+  },
+
+  "non_goals_v1": {
+    "guestbook": false,
+    "public_logs": false,
+    "comments": false,
+    "multi_user_auth": false
+  },
+
+  "engineering_principles": [
+    "Admin-first development",
+    "Trust over flash",
+    "Finish v1 before adding experiments",
+    "Frontend is replaceable, backend is durable"
+  ]
+}
