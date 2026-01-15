@@ -11,7 +11,7 @@ backend/
 │   │   ├── Profile.model.ts
 │   │   ├── Project.model.ts
 │   │   ├── Resume.model.ts
-│   │   ├── Education.model.ts
+│   │   ├── Timeline.model.ts
 │   │   └── Lead.model.ts
 │   │
 │   ├── routes/                ← TRANSPORT (CTC: T)
