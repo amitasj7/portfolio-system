@@ -34,7 +34,123 @@
 - API URLs use major version only (v1, v2).
 - Minor and patch versions are managed internally via code releases.
 
+### 🧩 How app.ts will mount routes (concept)
+
+/app.ts
+app.use('/api/v1', v1Router)
+
+Inside v1Router:
+/profile
+/projects
+/timeline
+/resume
+
+
 Reasoning:
 - Simple to understand
 - Easy to maintain
 - Safe for frontend compatibility
+
+
+
+Public Read-Only APIs (v1)
+Global Rules
+
+Method: GET only
+Auth: None
+Access: Public
+Versioning: /api/v1/
+No mutations
+No sensitive/internal fields
+isVisible = true filters applied where applicable
+
+
+GET /api/v1/profile
+
+Purpose
+Return public profile data for portfolio header / about section.
+
+Data Source
+Profile model (singleton)
+
+Behavior
+Fetch single profile document
+
+If not found → return null
+Exclude internal fields (_id, __v, timestamps)
+Response Shape
+
+
+GET /api/v1/projects
+
+Purpose
+Return all visible projects for portfolio showcase.
+
+Data Source
+Project model
+
+Behavior
+Filter: isVisible = true
+
+Sort: order ASC or createdAt DESC
+Return array (can be empty)
+Response Shape
+
+
+GET /api/v1/timeline
+
+Purpose
+Return education + experience timeline.
+
+Data Source
+Timeline model
+
+Behavior
+Filter: isVisible = true
+
+Sort: order ASC
+Mixed types allowed (education, experience)
+Response Shape
+
+
+GET /api/v1/resume
+
+Purpose
+Return resume content or resume metadata.
+
+Data Source
+Resume model (singleton)
+
+Behavior
+If isPublic = false → return 404
+
+No file streaming here (only metadata / HTML)
+Response Shape
+
+
+Error Handling (All APIs)
+
+200 → success
+404 → resource not found / not public
+500 → unexpected server error
+No custom error objects in v1.
+
+
+Versioning Note
+
+/api/v1 is stable
+Breaking changes → /api/v2
+Minor changes handled internally
+
+
+
+🧩 ROUTE MAPPING (MENTAL MODEL) -
+app.ts
+ ├── /health
+ └── /api
+      └── /v1
+           ├── /profile
+           ├── /projects
+           ├── /timeline
+           └── /resume
+
