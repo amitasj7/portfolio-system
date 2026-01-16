@@ -64,3 +64,47 @@ whatsapp.ts
 // Rules:
 // - Only configuration
 // - No message logic
+
+
+
+## Express App Bootstrap (app.ts)
+
+🎯 Purpose of app.ts
+
+app.ts answers one question only:
+“How is the Express application configured?”
+
+It does NOT:
+Start the server
+Connect to DB
+Contain business logic
+
+
+🧠 Responsibilities (SHORT)
+app.ts responsibilities:
+- Create Express app instance
+- Register global middlewares
+- Register base routes
+- Handle unknown routes
+- Export app (do NOT listen here)
+
+
+🔌 Middlewares to plan (only list)
+Planned middlewares:
+- express.json()        // parse JSON
+- express.urlencoded() // parse form data
+- cors()                // allow frontend access
+- morgan()              // request logging (dev only)
+
+
+🛣️ Routes (planning only)
+Routes registered in app.ts:
+- /health        → health check
+- /api           → main API router (future)
+
+
+🚫 Rules (important)
+Rules:
+- app.ts must NOT call app.listen()
+- app.ts must NOT connect to database
+- app.ts must stay framework-only
