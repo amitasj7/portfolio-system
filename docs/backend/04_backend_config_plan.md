@@ -145,3 +145,52 @@ Behavior:
 - Log server start (port + environment)
 - Crash if startup fails (no silent failure)
 
+
+
+## Health Check Endpoint (/health)
+
+
+2️⃣ What is a Health Check? (1-line clarity)
+
+A health check tells machines (not humans) whether your backend is alive and ready.
+
+Used by:
+Load balancers
+Cloud platforms
+Monitoring tools
+You (during debugging)
+
+
+3️⃣ Health Check — SHORT PLANNING
+
+Route: GET /health
+
+Purpose:
+- Verify backend is running
+- Verify backend is reachable
+
+Response:
+- status: "ok"
+- uptime
+- timestamp
+
+Rules:
+- No database queries
+- No auth required
+- Must respond fast
+- Must never crash
+
+4️⃣ Where to implement
+Files involved:
+backend/src/routes/health.route.ts
+backend/src/app.ts        (mount route)
+
+
+5️⃣ What you do (fast execution)
+
+Step A — Create route file - backend/src/routes/health.route.ts
+Implement:
+Express router
+GET /health
+
+Step B — Attach route in app.ts
