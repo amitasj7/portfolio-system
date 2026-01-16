@@ -142,9 +142,24 @@ Versioning Note
 Breaking changes → /api/v2
 Minor changes handled internally
 
+## follow this directory structure
+routes/
+    │   ├── index.ts                # Root router (mounts /api, /health)
+    │   ├── health.route.ts         # GET /health
+    │   │
+    │   └── api/
+    │       ├── index.ts            # Mounts versions (/v1, future /v2)
+    │       │
+    │       └── v1/
+    │           ├── index.ts        # Mounts v1 routes
+    │           │
+    │           ├── profile.route.ts    # GET /api/v1/profile
+    │           ├── projects.route.ts   # GET /api/v1/projects
+    │           ├── timeline.route.ts   # GET /api/v1/timeline
+    │           └── resume.route.ts     # GET /api/v1/resume
+    │
 
-
-🧩 ROUTE MAPPING (MENTAL MODEL) -
+### 🧩 ROUTE MAPPING (MENTAL MODEL) -
 app.ts
  ├── /health
  └── /api
