@@ -114,3 +114,34 @@ Export:
 - export default app
 
 
+
+## Server Bootstrap (server.ts)
+
+File: server.ts
+
+Purpose:
+- Application entry point
+- Starts the backend server
+
+Responsibilities:
+- Load env configuration
+- Connect to MongoDB
+- Import configured Express app
+- Start server using app.listen()
+
+Startup order (MANDATORY):
+1. env.ts → validate environment
+2. db.ts  → connect database
+3. app.ts → configure express
+4. app.listen(PORT) → start server
+
+Rules:
+- No route definitions here
+- No middleware setup here
+- No business logic here
+- Fail fast if DB connection fails
+
+Behavior:
+- Log server start (port + environment)
+- Crash if startup fails (no silent failure)
+
