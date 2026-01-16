@@ -108,3 +108,9 @@ Rules:
 - app.ts must NOT call app.listen()
 - app.ts must NOT connect to database
 - app.ts must stay framework-only
+
+
+Export:
+- export default app
+
+
