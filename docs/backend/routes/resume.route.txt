@@ -1,0 +1,79 @@
+File: resume.route.ts
+
+Purpose:
+- Expose public resume content for frontend display.
+- Used by resume page and download section.
+
+Route:
+- GET /api/v1/resume
+
+Access:
+- Public
+- No authentication required
+
+Data Source:
+- Resume model (singleton)
+
+---
+
+What happens in this file (step-by-step):
+
+1. Import dependencies
+   - Express Router
+   - Resume model
+   - Resume controller function
+
+2. Create router instance
+   - Initialize Express Router
+
+3. Define GET route
+   - Method: GET
+   - Path: '/'
+   - Maps to: /api/v1/resume
+
+4. Controller responsibility (delegated)
+   - Fetch single resume document
+   - Check isPublic flag
+   - Do not expose resume if isPublic = false
+
+5. Data safety rules
+   - Return only public fields
+   - No internal metadata
+   - No file streaming logic here
+
+6. Response handling
+   - If resume exists and isPublic → return data
+   - If resume not public → return 404
+   - If resume missing → return null or 404
+
+7. Error handling
+   - Catch unexpected errors
+   - Return 500 with safe message
+
+8. Export router
+   - Export router as default
+
+---
+
+What this file MUST NOT do:
+
+- Must NOT upload resume files
+- Must NOT stream PDF files
+- Must NOT handle admin updates
+- Must NOT connect to database
+
+---
+
+Relationship:
+
+resume.route.ts
+  → resume.controller.ts
+      → Resume.model.ts
+
+---
+
+Completion checklist:
+
+- GET /api/v1/resume works
+- Respects isPublic flag
+- No sensitive data exposed

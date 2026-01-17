@@ -1,0 +1,79 @@
+File: timeline.route.ts
+
+Purpose:
+- Expose education and experience timeline data.
+- Used by frontend timeline / resume section.
+
+Route:
+- GET /api/v1/timeline
+
+Access:
+- Public
+- No authentication required
+
+Data Source:
+- Timeline model (multiple documents)
+
+---
+
+What happens in this file (step-by-step):
+
+1. Import dependencies
+   - Express Router
+   - Timeline model
+   - Timeline controller function
+
+2. Create router instance
+   - Initialize Express Router
+
+3. Define GET route
+   - Method: GET
+   - Path: '/'
+   - Maps to: /api/v1/timeline
+
+4. Controller responsibility (delegated)
+   - Fetch all timeline entries
+   - Filter isVisible = true
+   - Include both education and experience
+   - Sort by order field
+
+5. Data safety rules
+   - No internal IDs
+   - No admin-only fields
+   - Safe for public display
+
+6. Response handling
+   - Always return array
+   - Empty array if no entries exist
+
+7. Error handling
+   - Catch unexpected errors
+   - Return 500 with safe message
+
+8. Export router
+   - Export router as default
+
+---
+
+What this file MUST NOT do:
+
+- Must NOT mutate timeline data
+- Must NOT handle authentication
+- Must NOT separate education/experience logic here
+- Must NOT contain business logic
+
+---
+
+Relationship:
+
+timeline.route.ts
+  → timeline.controller.ts
+      → Timeline.model.ts
+
+---
+
+Completion checklist:
+
+- GET /api/v1/timeline works
+- Sorted timeline returned
+- Only visible entries included

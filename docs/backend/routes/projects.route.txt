@@ -1,0 +1,81 @@
+File: projects.route.ts
+
+Purpose:
+- Expose public, read-only API for portfolio projects list.
+- Used by frontend to render projects / work section.
+
+Route:
+- GET /api/v1/projects
+
+Access:
+- Public
+- No authentication required
+
+Data Source:
+- Project model (multiple documents)
+
+---
+
+What happens in this file (step-by-step):
+
+1. Import dependencies
+   - Express Router
+   - Project model
+   - Projects controller function
+
+2. Create router instance
+   - Initialize Express Router
+   - Do not create app instance
+
+3. Define GET route
+   - Method: GET
+   - Path: '/'
+   - Maps to: /api/v1/projects
+
+4. Controller responsibility (delegated)
+   - Fetch all projects from database
+   - Filter only visible projects (isVisible = true)
+   - Sort projects by order or createdAt
+
+5. Data safety rules
+   - Return only public fields
+   - Exclude internal fields (_id, __v)
+   - No admin-only metadata
+
+6. Response handling
+   - Return empty array if no projects exist
+   - Always return array (never null)
+
+7. Error handling
+   - Catch unexpected errors
+   - Return 500 with safe error message
+
+8. Export router
+   - Export router as default
+   - Mounted by v1 index router
+
+---
+
+What this file MUST NOT do:
+
+- Must NOT create/update/delete projects
+- Must NOT handle authentication
+- Must NOT include business logic
+- Must NOT connect to database
+
+---
+
+Relationship:
+
+projects.route.ts
+  → projects.controller.ts
+      → Project.model.ts
+
+---
+
+Completion checklist:
+
+- GET /api/v1/projects works
+- Only visible projects returned
+- Sorted output
+- Safe public response
