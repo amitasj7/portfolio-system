@@ -1,5 +1,5 @@
 # Controllers Architecture
- ## Directory Structure
+ ## Directory Structure -
 
  ├── controllers/
     │   ├── index.ts                    # optional barrel exports
