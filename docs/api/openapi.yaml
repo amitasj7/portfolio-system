@@ -1,0 +1,40 @@
+openapi: 3.0.0
+
+info:
+  title: Portfolio Backend APIs
+  version: 1.0.0
+
+servers:
+  - url: http://localhost:5000
+    description: Local development server
+
+paths:
+  /health:
+    get:
+      responses:
+        '200':
+          description: OK
+
+  /api/v1/profile:
+    get:
+      responses:
+        '200':
+          description: OK
+
+  /api/v1/projects:
+    get:
+      responses:
+        '200':
+          description: OK
+
+  /api/v1/timeline:
+    get:
+      responses:
+        '200':
+          description: OK
+
+  /api/v1/resume:
+    get:
+      responses:
+        '200':
+          description: OK
