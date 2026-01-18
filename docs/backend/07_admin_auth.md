@@ -54,4 +54,95 @@ Dashboard (frontend)
 - Invalid credentials → 401
 - No session → 401
 
+## We’ll design this in 4 small blocks so it’s easy to implement
 
+### 1️⃣ ADMIN AUTH FLOW (MENTAL MODEL)
+Admin Login
+   ↓
+Credentials Verified
+   ↓
+Session Created (cookie) 
+   ↓
+Protected Admin APIs Accessible
+
+Logout = session destroyed.
+
+### 2️⃣ AUTH METHOD (LOCKED)
+Session-based authentication
+Cookie-based
+HTTP-only
+Server-managed session
+
+Reason:
+Single admin
+Browser dashboard
+Simple & secure
+
+
+### 3️⃣ DIRECTORY STRUCTURE (ADMIN AUTH)
+backend/src/
+├── auth/
+│   ├── admin.credentials.ts     # admin email/password config
+│   └── password.util.ts         # hash / compare helpers
+│
+├── middlewares/
+│   └── requireAdmin.ts          # session guard
+│
+├── controllers/
+│   └── admin/
+│       └── auth.controller.ts   # login / logout
+│
+├── routes/
+│   └── admin/
+│       └── auth.route.ts        # /admin/login, /admin/logout
+│
+└── config/
+    └── session.ts               # express-session setup
+
+
+### 4️⃣ ADMIN CREDENTIAL STRATEGY (IMPORTANT)
+Since it’s single admin:
+
+Stored in:
+.env (hashed password)
+NOT in database (v1)
+
+Example (conceptual):
+ADMIN_EMAIL
+ADMIN_PASSWORD_HASH
+
+Why?
+No signup
+No user table needed
+Simple & secure
+
+### 5️⃣ ROUTES DESIGN
+POST /admin/login
+POST /admin/logout
+GET  /admin/me    (optional)
+
+### Rules
+
+Public APIs → untouched
+Admin APIs → protected by middleware
+
+### 6️⃣ SESSION RULES
+- Cookie: httpOnly
+- Secure: true (in production)
+- Session expires automatically
+- Logout destroys session
+
+### 7️⃣ SECURITY GUARANTEES
+❌ No JWT
+❌ No tokens in frontend
+❌ No password in client storage
+✅ Cookies auto-sent
+✅ Server controls auth
+
+### 8️⃣ FAILURE CASES (DEFINED)
+| Case              | Response |
+| ----------------- | -------- |
+| Wrong credentials | 401      |
+| No session        | 401      |
+| Session expired   | 401      |
+| Logout success    | 200      |
