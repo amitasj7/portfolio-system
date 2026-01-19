@@ -167,3 +167,6 @@ backend/src/routes/admin/auth.route.ts
 
 🧩 STEP 5: Admin Guard Middleware
 backend/src/middlewares/requireAdmin.ts
+
+🧩 STEP 6: Wire Session & Admin Routes
+backend/src/app.ts
