@@ -146,3 +146,27 @@ Admin APIs → protected by middleware
 | No session        | 401      |
 | Session expired   | 401      |
 | Logout success    | 200      |
+
+
+
+
+
+# what i do -
+🧩 STEP 1: Session Configuration (FOUNDATION)
+   - backend/src/config/session.ts
+
+🧩 STEP 2: Admin Credentials Helper
+backend/src/auth/admin.credentials.ts
+backend/src/auth/password.util.ts
+
+🧩 STEP 3: Admin Auth Controller
+backend/src/controllers/admin/auth.controller.ts
+
+🧩 STEP 4: Admin Auth Routes
+backend/src/routes/admin/auth.route.ts
+
+🧩 STEP 5: Admin Guard Middleware
+backend/src/middlewares/requireAdmin.ts
+
+🧩 STEP 6: Wire Session & Admin Routes
+backend/src/app.ts
