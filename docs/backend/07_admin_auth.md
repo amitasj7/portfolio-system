@@ -159,5 +159,9 @@ Admin APIs → protected by middleware
 backend/src/auth/admin.credentials.ts
 backend/src/auth/password.util.ts
 
+🧩 STEP 3: Admin Auth Controller
+backend/src/controllers/admin/auth.controller.ts
 
+🧩 STEP 4: Admin Auth Routes
+backend/src/routes/admin/auth.route.ts
 
