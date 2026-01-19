@@ -165,3 +165,5 @@ backend/src/controllers/admin/auth.controller.ts
 🧩 STEP 4: Admin Auth Routes
 backend/src/routes/admin/auth.route.ts
 
+🧩 STEP 5: Admin Guard Middleware
+backend/src/middlewares/requireAdmin.ts
