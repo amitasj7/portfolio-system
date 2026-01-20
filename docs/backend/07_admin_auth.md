@@ -170,3 +170,318 @@ backend/src/middlewares/requireAdmin.ts
 
 🧩 STEP 6: Wire Session & Admin Routes
 backend/src/app.ts
+
+
+
+## FULL, INDUSTRY-LEVEL Admin API list,
+===============================
+ADMIN API – FULL LIST (v1)
+===============================
+
+Base prefix:
+ /admin
+
+--------------------------------
+AUTH (ADMIN)
+--------------------------------
+
+POST   /admin/auth/login
+- Login admin (creates session)
+
+POST   /admin/auth/logout
+- Logout admin (destroys session)
+
+GET    /admin/auth/me
+- Check current admin session (auth verify)
+
+
+--------------------------------
+PROFILE (SINGLE DOCUMENT)
+--------------------------------
+
+GET    /admin/profile
+- Get profile data (admin view)
+
+PUT    /admin/profile
+- Create or update profile data
+
+
+--------------------------------
+PROJECTS (MULTIPLE)
+--------------------------------
+
+GET    /admin/projects
+- Get all projects (including hidden)
+
+POST   /admin/projects
+- Create a new project
+
+PUT    /admin/projects/:id
+- Update a project
+
+DELETE /admin/projects/:id
+- Delete a project
+
+
+--------------------------------
+TIMELINE (EDUCATION + EXPERIENCE)
+--------------------------------
+
+GET    /admin/timeline
+- Get all timeline entries
+
+POST   /admin/timeline
+- Create timeline entry
+
+PUT    /admin/timeline/:id
+- Update timeline entry
+
+DELETE /admin/timeline/:id
+- Delete timeline entry
+
+
+--------------------------------
+RESUME (SINGLE DOCUMENT)
+--------------------------------
+
+GET    /admin/resume
+- Get resume data (admin)
+
+PUT    /admin/resume
+- Create or update resume
+
+POST   /admin/resume/upload
+- Upload resume file (PDF)
+
+
+--------------------------------
+LEADS / CONTACT
+--------------------------------
+
+GET    /admin/leads
+- View all contact form submissions
+
+GET    /admin/leads/:id
+- View single lead
+
+DELETE /admin/leads/:id
+- Delete a lead
+
+
+--------------------------------
+SYSTEM / META (OPTIONAL)
+--------------------------------
+
+GET    /admin/health
+- Admin-only system health
+
+--------------------------------
+SECURITY RULE
+--------------------------------
+
+ALL /admin/* routes:
+- Require session (requireAdmin middleware)
+- Public users cannot access any admin route
+
+
+===============================
+ADMIN API – FULL LIST (v1)
+===============================
+
+Base prefix:
+ /admin
+
+--------------------------------
+AUTH (ADMIN)
+--------------------------------
+
+POST   /admin/auth/login
+- Login admin (creates session)
+
+POST   /admin/auth/logout
+- Logout admin (destroys session)
+
+GET    /admin/auth/me
+- Check current admin session (auth verify)
+
+
+--------------------------------
+PROFILE (SINGLE DOCUMENT)
+--------------------------------
+
+GET    /admin/profile
+- Get profile data (admin view)
+
+PUT    /admin/profile   
+- Create or update profile data
+
+
+--------------------------------
+PROJECTS (MULTIPLE)
+--------------------------------
+
+GET    /admin/projects
+- Get all projects (including hidden)
+
+POST   /admin/projects
+- Create a new project
+
+PUT    /admin/projects/:id
+- Update a project
+
+DELETE /admin/projects/:id
+- Delete a project
+
+
+--------------------------------
+TIMELINE (EDUCATION + EXPERIENCE)
+--------------------------------
+
+GET    /admin/timeline
+- Get all timeline entries
+
+POST   /admin/timeline
+- Create timeline entry
+
+PUT    /admin/timeline/:id
+- Update timeline entry
+
+DELETE /admin/timeline/:id
+- Delete timeline entry
+
+
+--------------------------------
+RESUME (SINGLE DOCUMENT)
+--------------------------------
+
+GET    /admin/resume
+- Get resume data (admin)
+
+PUT    /admin/resume
+- Create or update resume
+
+POST   /admin/resume/upload
+- Upload resume file (PDF)
+
+
+--------------------------------
+LEADS / CONTACT
+--------------------------------
+
+GET    /admin/leads
+- View all contact form submissions
+
+GET    /admin/leads/:id
+- View single lead
+
+DELETE /admin/leads/:id
+- Delete a lead
+
+
+--------------------------------
+SYSTEM / META (OPTIONAL)
+--------------------------------
+
+GET    /admin/health
+- Admin-only system health
+
+--------------------------------
+SECURITY RULE
+--------------------------------
+
+ALL /admin/* routes:
+- Require session (requireAdmin middleware)
+- Public users cannot access any admin route
+
+
+app.ts
+ └── mounts /admin
+      └── routes/admin/index.ts
+           ├── auth.route.ts     → /admin/auth/
+           ├── profile.route.ts  → /admin/profile
+           ├── projects.route.ts → /admin/projects
+
+
+routes/admin/index.ts
+- mounts auth routes at /admin/auth
+- mounts profile routes at /admin/profile
+- mounts project routes at /admin/projects
+
+
+backend/src/routes/admin/
+│
+├── index.ts
+│   ├─ mounts all admin routes
+│   └─ applies requireAdmin middleware
+│
+├── auth.route.ts
+│   ├─ POST /admin/auth/login
+│   ├─ POST /admin/auth/logout
+│   └─ GET  /admin/auth/me
+│
+├── profile.route.ts
+│   ├─ GET /admin/profile
+│   └─ PUT /admin/profile
+│
+├── projects.route.ts
+│   ├─ GET    /admin/projects
+│   ├─ POST   /admin/projects
+│   ├─ PUT    /admin/projects/:id
+│   └─ DELETE /admin/projects/:id
+│
+├── timeline.route.ts
+│   ├─ GET    /admin/timeline
+│   ├─ POST   /admin/timeline
+│   ├─ PUT    /admin/timeline/:id
+│   └─ DELETE /admin/timeline/:id
+│
+├── resume.route.ts
+│   ├─ GET  /admin/resume
+│   ├─ PUT  /admin/resume
+│   └─ POST /admin/resume/upload
+│
+└── leads.route.ts
+    ├─ GET    /admin/leads
+    ├─ GET    /admin/leads/:id
+    └─ DELETE /admin/leads/:id
+
+
+STEP 4️⃣ Test Protected Admin Route (Auth Guard)
+
+If you already have a protected route like:
+GET /admin/auth/me
+(or any admin-only route)
+
+Request
+GET {{baseUrl}}/admin/auth/me
+
+Expected
+✅ If logged in:
+
+Status 200
+
+Admin data returned
+
+❌ If NOT logged in:
+
+Status 401
+
+Message: Unauthorized
+
+👉 This proves session-based auth is working.
+
+🔁 FULL REQUEST FLOW (ADMIN) ---
+
+Client (Postman / Admin UI)
+   ↓
+Route (/admin/...)
+   ↓
+requireAdmin middleware
+   ↓
+Controller (business logic)
+   ↓
+Model (MongoDB)
+   ↓
+Response (JSON)
+
+
