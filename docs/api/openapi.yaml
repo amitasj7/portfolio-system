@@ -23,6 +23,8 @@ tags:
     description: Publicly accessible timeline data
   - name: Public / Resume
     description: Publicly accessible resume data
+  - name: Public / Contact
+    description: Public contact form submission
   - name: Admin / Auth
     description: Admin authentication endpoints
   - name: Admin / Profile
@@ -384,6 +386,41 @@ paths:
       responses:
         '200':
           description: Uploaded
+
+  # --- Contact ---
+  /api/v1/contact:
+    post:
+      summary: Submit Contact Form
+      tags: [Public / Contact]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [name, email, message]
+              properties:
+                name:
+                  type: string
+                  example: "John Doe"
+                email:
+                  type: string
+                  example: "john@email.com"
+                message:
+                  type: string
+                  example: "Hello, I want to work with you."
+      responses:
+        '201':
+          description: Message sent successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                  leadId:
+                    type: string
 
   # --- Leads ---
   /admin/leads:
