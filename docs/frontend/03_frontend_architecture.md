@@ -2,7 +2,12 @@
 
 ## 1. Framework Choice
 - Framework: (Next.js / React + Vite) [to be locked]
-- Reason for choice
+- Reason for choice:
+    ✅ Why Next.js + App Router (Locked)
+        Industry standard
+        Clean layouts (perfect for admin dashboards)
+        Middleware for protected routes
+        Recruiter-approved stack
 
 ## 2. Application Type
 - SPA with client-side routing
@@ -25,18 +30,51 @@
 - Redirect unauthenticated users to /admin/login
 - Logout clears session and redirects
 
-## 5. Folder Structure (Proposed)
+## 5. 📁 Folder Structure (Admin-First, Scalable)
 
-frontend/
-├── src/
-│   ├── pages/
-│   ├── components/
-│   ├── layouts/
-│   ├── routes/
-│   ├── services/        # API calls
-│   ├── hooks/
-│   ├── utils/
-│   └── styles/
+portfolio-frontend/
+│
+├── app/
+│   ├── (auth)/
+│   │   └── admin/
+│   │       └── login/
+│   │           └── page.tsx
+│   │
+│   ├── (protected)/
+│   │   └── admin/
+│   │       ├── layout.tsx
+│   │       ├── page.tsx              # dashboard home
+│   │       ├── profile/
+│   │       ├── projects/
+│   │       ├── timeline/
+│   │       ├── resume/
+│   │       └── leads/
+│   │
+│   ├── layout.tsx                    # root layout
+│   └── globals.css
+│
+├── components/
+│   ├── ui/                           # buttons, inputs, modals
+│   ├── layout/                       # sidebar, header
+│   └── common/                       # loaders, empty states
+│
+├── lib/
+│   ├── api.ts                        # axios / fetch wrapper
+│   ├── auth.ts                       # auth helpers (client-safe)
+│   └── constants.ts
+│
+├── hooks/
+│   ├── useAuth.ts
+│   └── useFetch.ts
+│
+├── middleware.ts                    # route protection
+│
+├── public/
+│
+├── .env.local
+├── next.config.js
+├── tsconfig.json
+└── package.json
 
 ## 6. API Layer Design
 - Centralized API client
