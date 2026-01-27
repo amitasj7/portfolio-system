@@ -34,47 +34,35 @@
 
 portfolio-frontend/
 │
-├── app/
-│   ├── (auth)/
-│   │   └── admin/
-│   │       └── login/
-│   │           └── page.tsx
+├── src/
+│   ├── app/
+│   │   ├── (auth)/
+│   │   │   └── admin/
+│   │   │       └── login/
+│   │   │           └── page.tsx
+│   │   │
+│   │   ├── (protected)/
+│   │   │   └── admin/
+│   │   │       ├── layout.tsx
+│   │   │       ├── page.tsx
+│   │   │       ├── profile/page.tsx
+│   │   │       ├── projects/page.tsx
+│   │   │       ├── timeline/page.tsx
+│   │   │       ├── resume/page.tsx
+│   │   │       └── leads/page.tsx
+│   │   │
+│   │   ├── layout.tsx
+│   │   └── globals.css
 │   │
-│   ├── (protected)/
-│   │   └── admin/
-│   │       ├── layout.tsx
-│   │       ├── page.tsx              # dashboard home
-│   │       ├── profile/
-│   │       ├── projects/
-│   │       ├── timeline/
-│   │       ├── resume/
-│   │       └── leads/
-│   │
-│   ├── layout.tsx                    # root layout
-│   └── globals.css
-│
-├── components/
-│   ├── ui/                           # buttons, inputs, modals
-│   ├── layout/                       # sidebar, header
-│   └── common/                       # loaders, empty states
-│
-├── lib/
-│   ├── api.ts                        # axios / fetch wrapper
-│   ├── auth.ts                       # auth helpers (client-safe)
-│   └── constants.ts
-│
-├── hooks/
-│   ├── useAuth.ts
-│   └── useFetch.ts
-│
-├── middleware.ts                    # route protection
+│   ├── components/
+│   ├── lib/
+│   ├── hooks/
+│   └── styles/
 │
 ├── public/
-│
-├── .env.local
-├── next.config.js
-├── tsconfig.json
+├── middleware.ts
 └── package.json
+
 
 ## 6. API Layer Design
 - Centralized API client
