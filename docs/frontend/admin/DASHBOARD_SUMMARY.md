@@ -341,3 +341,14 @@ Still should be readable
 ## Recent leads section - 
 - when  i click on any lead it should open popup simliar to lead section 
 - so that i can reply to it directly from here
+
+
+
+## Header Controls -
+- present: when i click on notification bell, it's open and then 
+    - if i click other places of notification it's not going to close
+    - if i click on notification cross it's going to close
+
+- Future update: when i hover on notification bell, it's open and then 
+    - if i click other places of notification it's going to close
+    - i don't need notification cross icon to close it.
