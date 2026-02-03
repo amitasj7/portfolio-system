@@ -178,6 +178,10 @@ Respond with:
   - if this button click for play then minimum 5 second it's disable to pause effect.
   - after 5 second it's enable to pause effect.
 
+- when anyone click 3d effect button then music button should be automatic active.
+- 3d effect button tips:
+  - replace with first tips --> music automatically play.
+
 - future: card animation match the vibe with this 3D effect when card fade in or fade out. so change animation
 
 
@@ -587,7 +591,9 @@ it's very important for a hr or user. so take top 3 method and apply one of them
 - after press send message button:
  - i want that message show for 10 sec and then back.
 
-
+future update: 
+  - check email service correctly worked or not.
+  - whatsapp and mobile no integration also.
 
 # render problem -
 - problem: it's taking much more time to compile and render
