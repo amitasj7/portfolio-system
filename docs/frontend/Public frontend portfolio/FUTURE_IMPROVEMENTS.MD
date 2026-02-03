@@ -543,6 +543,52 @@ icon color: lab(51 34.29 -80.89);
     - for featured projects: show top 3 {dynamically change by admin in admin/projects route page} projects in order of order field value.
     
 
+- Display Order ? 
+
+what is button and what it's doing ? which value it's take ?
+
+
+- problem: suppose in admin there is 5 (order 0 to 5) project exist now
+ - if I add new project:
+    - how many value it take range:
+        - first: if we don't fill order field it take automatically next value that is 6.
+        - second: if we add 0 value then it take 0. and other project order value increase by 1.
+        - third: if we add 3 value then it take 3. and     then project (order: 3, 4, 5) order value increase by 1. new order (4,5,6)
+
+     - apart from this don't take any other value show a error message. take only 0 - 6.
+
+
+- these is an misconfusing part:
+  - display order start from 0 but i want it start from 1.
+  - so when we select how many no. of project we want to show in featured projects then it should be 1 - 10.
+  - and when we select 1 then it should show 1st project. when we select 2 then it should show 1st and 2nd project. when we select 3 then it should show 1st, 2nd and 3rd project. and so on.
+
+
+- perfect for first time create project:
+- i want this for update projects also:
+  - all order features should be same as create project.
+
+- http://localhost:3000/projects routes page: 
+- future update:  i want total projects count and featured projects count. it's show in button text (featured and all projects button)
+
+# contact section - (http://localhost:3000/contact route page)
+- field: I'm reaching out as...
+  - i want this field mandatory.
+  
+- in ss :
+  - Select an option: it's bright, I don't want it bright. so update it.
+  - the dropdown menu is normal. it's not looking good. update it. add glassmorphis and some mild round corner.
+
+- when i click on I'm reaching out as... dropdown then it's open normal. i want it open on hover with animation and glassmorphis effect.
+
+- write it in best way. and highlight responsive time with animation and icon of time.
+it's very important for a hr or user. so take top 3 method and apply one of them.
+
+- after press send message button:
+ - i want that message show for 10 sec and then back.
+
+
+
 # render problem -
 - problem: it's taking much more time to compile and render
 - solution: give me top 5 industry best solution for this problem.
