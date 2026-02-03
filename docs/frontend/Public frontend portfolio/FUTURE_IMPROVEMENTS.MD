@@ -523,3 +523,27 @@ icon color: lab(51 34.29 -80.89);
 
 - present : no animation when user scroll.
 - future: add animation for each card when user scroll screen.
+
+# project section -
+
+- http://localhost:3000/projects route page:
+  - there are two button: all projects and featured.
+  - when all projects button active, projects show. after then when i click featured button then featured projects show. now when i click again all projects button then projects now show why?
+
+  - present: "all projects" button then "featured" button
+  - future update: "featured" button first then "all projects" button.
+
+
+- add a order field
+  - when admin add a project then it also take input a order field value something like github url link.
+  - when projects show in admin/projects route page then it show projects in order of order field value.
+
+  - when show in public/projects route page then:
+    - for all projects: show projects in order of order field value.
+    - for featured projects: show top 3 {dynamically change by admin in admin/projects route page} projects in order of order field value.
+    
+
+# render problem -
+- problem: it's taking much more time to compile and render
+- solution: give me top 5 industry best solution for this problem.
+ - can we add a button popup if render take time more that 5 sec ?
