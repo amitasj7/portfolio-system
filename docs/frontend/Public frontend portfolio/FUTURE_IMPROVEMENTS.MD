@@ -732,8 +732,105 @@ include pages: - (http://localhost:3000/admin/resume) route page
 
 - also check frontend with automatically open browser.
 
+### basic information section - 
+
+future update: in left uppder corner, should i use a image or AS avatar ?
+- give me your suggestions ?
+
+
+### educaiton sections - (DONE ✅)
+present: 
+ - when i hover on education card:
+  - it's highlight all educations. that's not good
+      - update: when I'll hover this card then it's highlight this card only. not educations parts.
+
+future update: (Implemented ✅)
+ - when i'll hover one particualr education part, it should be highlight.
+  -  popup card (glasspmorphism + animation style of border)  will show. 
+    - in this card, i want to show this education details.
+       - like: achievement, top subjects, marks in subjects etc.
+- so that hr or founder will understand this education details. and achievement fastly show.
+
+
+
+- i want only 2 educations show in main card. (Implemented ✅)
+- in bottom show a three dot icon (..., same as main links card). (Implemented ✅)
+  - all other education show in this ... icons.
+
+- first two educations (add by admin) show in main card. and ohter show in this ... icons (hover, popup will show same as link card for other links) (Implemented ✅)
+  - after that it's follow main card layout same.
+
+- when admin add educations then it's also be available drag and drop for order. (Implemented ✅)
+
+
+present: when i hover on one entry then pop show.
+problem: but when i leave this entry then pop don't hide.
+  - update: when i leave this one entry then pop should be hide. (DONE ✅)
+
+- solve same problem for three dot icon.
+present: when i hover on one three dot icon then pop show.
+problem: but when i leave this three dot icon then pop don't hide.
+  - update: when i leave this one three dot icon then pop should be hide. (DONE ✅) 
+
+- present: when i hover on three dot icon pop show.
+problem: but when i leave this three dot icon and goes to visit entries in this three dot icon then pop hide. so i'm not able to open entries in this pop up.
+
+soluiton: when i hover on three dot icon:
+          - one more pop message show (in other direction).
+             - message: "click it to see entries" (DONE ✅)
+
+
+- update: 
+  - when i hover on three dot icon then 2 pop show.
+    - 1. message pop : "click (single click) to show entries"
+    - 2. entries pop
+
+  - when i click (one single click) on this three dot icon then entries pop should be open and message pop should be hide.
+    - now if i move my cursor in this entries pop then it's entries pop should not be hide.
+    - and if i move my cursor from this entries pop (leave this entries pop, apart from this entries pop) then it's entries pop should be hide.
+  - when i click on this three dot icon again then entries pop should be close.
+  (All Above Logic Implemented ✅)
+
+- present: 
+  - when i hover on three dot icon pop show.
+    -in this popup,  when i hover on one entry then other details not show.
+    - update: i want other details show simillar like education card entries hover popup show. (DONE ✅)
+
+
+- present: 
+  - when i click on three dot icon 
+    - message pop go. okay
+    - entries pop does not hide. okay
+
+  - now when i move my cursor after leavning this three dot icon then:
+    - entries pop hide. problem.
+    - update: entries pop should not be hide. (DONE ✅)
+
+- suppose when entries pop show now it's new card simillar to education card. now i have 2 case:
+  - if i'll  move my cursor in this entries pop then it's entries pop should not be hide. (DONE ✅)
+  - if i'll  move my cursor from this entries pop (leave this entries pop, apart from this entries pop) then it's entries pop should be hide. (DONE ✅)
+
+
+path: three dot icon click ---> entries pop show ---> entries hover --> should be create: details pop should be show contain highlight and top - subject. (simillar like education card entries hover pop show) (DONE ✅)
+
+### Admin Experience (DONE ✅)
+
+- Implemented sticky header in Admin Resume page for quick access to "Save All".
+- Added `Ctrl+S` / `Cmd+S` keyboard shortcut for rapid saving.
 
 # render problem -
 - problem: it's taking much more time to compile and render
 - solution: give me top 5 industry best solution for this problem.
  - can we add a button popup if render take time more that 5 sec ?
+
+
+ - in ss highlight red color: use  (http://localhost:3000/admin/resume) route page
+ - when i scroll down then it's will show. 
+ - fix it. so, after update anything, i can fastly save it.
+
+ - is there any other way to sovle this ?
+
+
+ use these url page - 
+ (http://localhost:3000/admin/resume) route page
+ (http://localhost:3000/resume) route page
