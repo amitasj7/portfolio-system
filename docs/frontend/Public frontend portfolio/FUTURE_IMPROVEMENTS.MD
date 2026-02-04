@@ -813,10 +813,40 @@ soluiton: when i hover on three dot icon:
 
 path: three dot icon click ---> entries pop show ---> entries hover --> should be create: details pop should be show contain highlight and top - subject. (simillar like education card entries hover pop show) (DONE ✅)
 
+### Work Experience - 
+
+- future: 
+  - main card should be show only max 3 entries.
+  - other entries show in three dot icon.
+  - now you have to take a simillar card like work experience:
+    - show all other work experience entries in this card with same text style, brightness and color combination.
+  - but this new card show only when i hover on three dot icon.
+
+
+### Technical skills - 
+also done the same thing in this section.
+
+### Featured projects - 
+
 ### Admin Experience (DONE ✅)
 
 - Implemented sticky header in Admin Resume page for quick access to "Save All".
 - Added `Ctrl+S` / `Cmd+S` keyboard shortcut for rapid saving.
+
+
+# resume section - 
+ this is code line have to much.
+
+- should we divide into files like:
+  - BasicInformation
+  - Education
+  - WorkExperience
+  - TechnicalSkills
+  - FeaturedProjects
+  - Achievements
+
+- give me other solution also. what is industry standard way ?
+
 
 # render problem -
 - problem: it's taking much more time to compile and render
