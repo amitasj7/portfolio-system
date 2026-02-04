@@ -595,6 +595,144 @@ future update:
   - check email service correctly worked or not.
   - whatsapp and mobile no integration also.
 
+
+# Resume section -
+
+## details - 
+- Software Engineer | Full-Stack & Backend (AI-Focused)
+
+
+## admin route - (http://localhost:3000/admin/resume) route page
+
+- on this page:
+  - present: basic information section, link are only for: 
+      github, linkedin etc.
+  - future update: add more link options (dynamically add by admin) like: 
+      github, linkedin, leetcode, hackerrank, twitter, instagram, facebook, youtube, portfolio, website, blog, etc.
+
+- in social card:
+  - present: there are multiple links come in one card that's not good. not foucsed. create confusion to hr or founder.
+        
+
+  - future update: i want only 3 links for main card.
+     - and other links show in upper right corner (watch ss upeer right corner highlight with red color).
+
+     - don't implement it now. tell me first what are other desgin layout in your opinion. then we decide.
+
+- present: this socail links card layout is not good for quick scan. it's create confusion to hr or founder.
+- future update: 
+  - replace social links text, icon with main links and icon.
+  - now take three main links that are most important.
+      - i will decide with admin panel.
+  - in bottom download cv button show.
+  - in upper right corner show other button.
+      - when i hover this button, a another card open that define other links section (create dynamically by admin)
+         - section name and links examples: 
+
+         - PLATFORM CATEGORIES (PORTFOLIO LINK SYSTEM)
+
+├─ Professional Platforms
+│  ├─ LinkedIn
+│  ├─ Wellfound (AngelList Talent)
+│  ├─ Indeed Profile
+│  ├─ Glassdoor Profile
+│  ├─ Personal Resume (PDF / Website)
+│  └─ Portfolio Website (Primary hub)
+│
+├─ Coding & Engineering Platforms
+│  ├─ GitHub
+│  ├─ GitLab
+│  ├─ Bitbucket
+│  ├─ LeetCode
+│  ├─ Codeforces
+│  ├─ CodeChef
+│  ├─ HackerRank
+│  ├─ AtCoder
+│  ├─ GeeksforGeeks
+│  └─ Stack Overflow
+│
+├─ Project & Work Showcases
+│  ├─ Live Project Demos
+│  ├─ Case Study Pages
+│  ├─ Demo Videos (Loom / YouTube)
+│  ├─ API Documentation
+│  └─ Architecture / System Design Docs
+│
+├─ Social & Presence Platforms
+│  ├─ Twitter / X
+│  ├─ Threads
+│  ├─ Reddit
+│  ├─ Discord
+│  ├─ Telegram
+│  └─ Facebook (optional / personal)
+│
+├─ Writing & Knowledge Sharing
+│  ├─ Medium
+│  ├─ Dev.to
+│  ├─ Hashnode
+│  ├─ Personal Blog
+│  ├─ Substack
+│  └─ Notion (public docs)
+│
+├─ Design & Creative (Optional)
+│  ├─ Figma
+│  ├─ Dribbble
+│  ├─ Behance
+│  ├─ Canva
+│  └─ Framer
+│
+├─ Learning & Credentials
+│  ├─ Coursera
+│  ├─ Udemy
+│  ├─ edX
+│  ├─ Google Developer Profile
+│  ├─ AWS Skill Builder
+│  └─ Certification Pages
+│
+├─ Community & Open Source
+│  ├─ Open Source Contributions
+│  ├─ GitHub Organizations
+│  ├─ Hackathon Profiles
+│  ├─ Meetup Groups
+│  └─ Conference Talks
+│
+├─ Communication & Contact
+│  ├─ Email
+│  ├─ Calendly
+│  ├─ Contact Form
+│  └─ Public Discord / Slack
+│
+└─ Miscellaneous (Use Carefully)
+   ├─ YouTube Channel
+   ├─ Podcast Appearances
+   ├─ Newsletter
+   └─ Public Notes / Wikis
+
+Future update:
+include pages: - (http://localhost:3000/admin/resume) route page
+               - (http://localhost:3000/resume) route page
+
+- I want to create all sections dynamically (by admin panel):
+  - in these sections, also create links dynamically with icon.
+    - for this link, category section show to add this link in the particular section.
+    - but if this link is not related with existing section then create new section for this link (dynamically admin panel).
+
+    - show on main card (Primary) check box: max 3 check, after that, not able to check this box.
+
+- in ss highlight red color: use  (http://localhost:3000/resume) route page
+
+  - remove these all icons and 
+  - show a text "main links"
+  - also add a icon for main links.
+
+- future update: use (http://localhost:3000/admin/resume) route page
+  - define order of sections and links (dynamically admin panel).
+    - so in frontend what should be first show it's completely control by admin.
+    - like which sections show first and in this sections which links show first.
+
+- also check frontend with automatically open browser.
+
+
 # render problem -
 - problem: it's taking much more time to compile and render
 - solution: give me top 5 industry best solution for this problem.
