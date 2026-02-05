@@ -942,13 +942,6 @@ header:
 
 - update both in best way that match vibe with 3D-effect and other elements ui.
 
-- hero/profile card animation:
-  - currently, it's not good animation.
-  - i want a 3D type animation. 
-    - present : when scroll down, hero card comes from top.
-      - it give me feel 2D. problem
-    - update: when scroll down, hero card comes from top with 3D type animation.
-
 for header and footer:
   - the reactable shape is not good.
   - both are visible on screen at a single time.
