@@ -162,6 +162,27 @@ Respond with:
 
 
 # 3D effect:
+
+- update:
+  - when "3D Effect" button is active
+  - Upper scroll limit hit
+
+  + now only 3d effect is active and clearly show.t
+  + all content should be blur now.
+  + main focus on 3d effect.
+
+- i want to update details on this card, so how is this work.
+
+- in images red highlight section:
+  - it's not looking good.
+  - i want to change this.
+    - all three tags should be in one line. not take second line. 
+      - solve this using text size small
+      - other method that in your mind
+    - the bio part font style not good.
+      - change font style.
+      - and change space style and other also so it will looking best.
+
 - future: i want to add a button, like play button when i click this button the 3d effect rotate in all axis like x, sometime y and sometime z axis.
 
 - give me suggestion where i can add this button.
@@ -848,6 +869,12 @@ also done the same thing in this section.
 - give me other solution also. what is industry standard way ?
 
 
+update:
+  - achievements card width should be increase and same as width of work experience card.
+  - add one more card Future name - "Current Focus & Direction" in the right of achievements card.
+
+- it's not showing on admin/resume page to dynamically update.
+
 # render problem -
 - problem: it's taking much more time to compile and render
 - solution: give me top 5 industry best solution for this problem.
@@ -860,7 +887,86 @@ also done the same thing in this section.
 
  - is there any other way to sovle this ?
 
+for currecnt focus & direction card (reference image)- 
+- this is a vertical layout (up and down layout)
+- but i want to make it a horizontal layout (left and right layout)
+
+- the indentation is wrong.
+- update: 
+  - make it same as 2 arrow (red color) reference image. not 1 arrow (blue color) reference image.
+  - in one point, when first line start -> okay
+  - second line start below . mark --> problem
+    update: start second line below first line first word
+
+
+
+
+- when i'll refresh page, it should be minimised following sections :
+  - work experience
+  - current foucs & direction
+
+
+- I want to minimise social profiles:
+  - link sections (minimised and expanded)
+
+- in section order (check image)
+  - i want to expand and minimise the section order 
+  - now it's will show all related links (only name).
+    - i can update order of links in this section using drag and drop
+
+take refernce of iamge -
+  - this card also is not good looking.
+  - it's size too much big and covering all screen. that's not good.
+  - update it also
+
+header: 
+- change desing layout and text style according to you
+
+- when we click project in header then :
+  - it's should be clearly visible that it's active and project page show
+  - what we can do. do it according to you.
+  - apply best design, color relationships
+
+- take image for footer:
+  - updte style, design, color combination, text style, brightness, etc.
+  - according to you.
+  - update text content (industry standard). 
+
+- the design is not good.
+- update it according to you. 
+- update it into best design that will match with other ui 
+-  page: (http://localhost:3000/) route page
+
+- footer size & background is not good.
+- beacuse of this the 3D-effect is not looking impressive.
+
+- update both in best way that match vibe with 3D-effect and other elements ui.
+
+- hero/profile card animation:
+  - currently, it's not good animation.
+  - i want a 3D type animation. 
+    - present : when scroll down, hero card comes from top.
+      - it give me feel 2D. problem
+    - update: when scroll down, hero card comes from top with 3D type animation.
+
+for header and footer:
+  - the reactable shape is not good.
+  - both are visible on screen at a single time.
+    - i want only one at a time. when down scroll limit finish then header should not be show. only footer show.
+    - other than header show.
+    - what you thought, give me 3 top thoughts.
+  - update it also according to you best design.
+  - let me give you some ideas:
+    - rectangle shape corner change
+    - what you thought, give me 3 top thoughts.
+    
+
 
  use these url page - 
  (http://localhost:3000/admin/resume) route page
  (http://localhost:3000/resume) route page
+
+route url page: (http://localhost:3000/) route page
+in hero seciton card.
+update it
+
