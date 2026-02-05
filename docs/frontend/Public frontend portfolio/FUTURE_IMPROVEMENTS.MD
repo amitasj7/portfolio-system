@@ -959,8 +959,21 @@ for header and footer:
   - let me give you some ideas:
     - rectangle shape corner change
     - what you thought, give me 3 top thoughts.
-    
 
+ in footer section:   
+- i want to change dynamically(admin/profile route page)
+- take red highlight color content from image.
+1. social media links
+
+- for dynamically changeing this:
+  - they are not showing on admin/profile route page.
+  - update it.
+
+  http://localhost:3000/admin/profile
+
+name: "Amit Sisodiya"
+- it takes only first name like "Amit". problem
+- i want it take full name like: "Amit Sisodiya" not "Amit".
 
  use these url page - 
  (http://localhost:3000/admin/resume) route page
