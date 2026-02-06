@@ -15,8 +15,9 @@ z1 = 5*di
 a = 5*di/2
 c = di/2
 
-linear velocity: v 
-rotatiioin velocity: omega = v*hero  card width
+linear velocity: v = omega * hero  card width
+rotatiioin velocity: omega = v/hero  card width
+take variable v = ?
 
 # HERO  CARD ANIMATION - 05-02-2026
 
@@ -67,7 +68,23 @@ update:
             - so rotation_count = 100
             - so rotation angle = 360 * rotation_count
 
+- you have take all variable that can be change.
+- like velocity, acceleration,  rotation angle, rotation count rotational axis etc.
+- i want to change them and want to see the effect.
+- i want change x1, z1 
 
+when i scroll down (single scroll, fast scroll) then:
+    - present: card coming front and showing on camera lens. then go to back. it's doesn't stop at camera lens. wrong.
+   - it's a single scroll.
+
+   update:
+    - when i scroll down (single scroll, fast scroll)then:
+        - card coming front and showing on camera lens
+        - then stopped on camera lens and scroll down disabled. even if i scroll down too much fast. (in single scroll)
+        - now when i scroll again then it will go to back 
+
+       - it's take two scroll to complete one path.
+       - so card will show on camera lens and stopped so that user clearly see the card.
 
 working dir: portfolio-frontend\src\components\3d
 if you need other, then you can also take
