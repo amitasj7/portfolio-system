@@ -58,4 +58,90 @@ present:
     - i have already filled demo/ video url and case study.
     - they are not showing on project card. (/projects)     route page.
     - update:
-        choose a best design layout for this card to show demo/ video url button and case study.
+        choose a best design layout for this card to show demo/ video url button and case study button.
+
+
+for case study:
+    - 👉 Links = external
+    - 👉 Case study = deep understanding 
+
+
+First — What SHOULD happen when “Case Study” is clicked?
+
+✅ Industry-best behavior
+Case Study opens an internal, focused experience where the reader:
+Understands why the project exists
+Sees how you think
+Learns what impact it had
+
+So:
+External links → new tab
+Case study → internal deep-dive page / view
+
+
+🥇 IDEA 1 — Dedicated Case Study Page (BEST, Industry Standard) - you have to create this page.
+
+Flow
+Card → Case Study button → /projects/project-name
+
+
+
+📄 Layout (Markdown / Code-Editor Style)
+# Project Name
+
+## One-Line Summary
+Short, clear description of what this product solves.
+
+---
+
+## Problem
+- What real problem existed in the market?
+- Why existing solutions were insufficient?
+
+---
+
+## Insight
+- What unique observation did you make?
+- Why you decided to solve it this way?
+
+---
+
+## Solution
+- High-level architecture
+- Key design decisions
+- Trade-offs you accepted
+
+---
+
+## Execution
+- How you built it end-to-end
+- Challenges faced and how you solved them
+
+---
+
+## Impact
+- Users / feedback
+- Metrics (if any)
+- What changed because this product existed
+
+---
+
+## Iteration & Learnings
+- What you improved after feedback
+- What you would do differently next time
+
+Why this is powerful
+Mirrors real product thinking
+Easy to scan
+Extremely recruiter-friendly
+
+👉 This should be your primary approach.
+
+
+- we have already taken a html/md input content from admin/projects page.
+- in this input field you have to write in placeholder (line 91 to 132 of this file content).
+- take md placeholder content in a variable and pass it to placeholder.
+
+- the project card read case study button is not looking good. 
+update:
+    - choose a best design layout design for this card to show case study button.
