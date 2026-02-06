@@ -142,6 +142,25 @@ Extremely recruiter-friendly
 - in this input field you have to write in placeholder (line 91 to 132 of this file content).
 - take md placeholder content in a variable and pass it to placeholder.
 
-- the project card read case study button is not looking good. 
+- the project card "read case study" button is not looking good. 
 update:
     - choose a best design layout design for this card to show case study button.
+    - chnage design style best.
+
+
+first understand the problem -
+    - problem is that: the button design, location on card, layout are n't good.
+    - you have to design it again that match vibe with card.
+    - don't design other thigns.
+
+- give me best 3 design solution for this.
+
+route page: http://localhost:3000/projects/project-id
+the design of case study page is not good.
+- in the upload image:
+    - i have highlight that area with red color lines.
+    - you have to design and update that style.
+    - if that hr and founder can sacn it in a second.
+    - it's a md file content. so design it.
+
+- - give me best 2 design solution for this.

@@ -90,6 +90,33 @@ with sub-20ms response times and scalable architecture.
 
 
 
+collection: timelines
+
+
+Work Experience
+Vassar Labs - Software Engineer Intern (R & D) May 2025 - Nov 2025
+✓ Contributed as part of a 10-member team, working closely with the Project Manager and CEO to drive
+successful project delivery.
+✓ Designed and optimized SQL queries, stored procedures, and database schemas for efficient data management.
+✓ Built and integrated robust RESTful APIs with JavaScript/Node.js, enhancing application interoperability,
+streamlining workflows, and significantly reducing overall development time.
+✓ Improved accuracy an AI model in the IWM (Integrated Water Management) project through R&D, enabling
+predictive analytics and automated testing to optimize water resource efficiency.
+WebBuddy LLC - SDE Intern (Full-Stack Developer) Apr 2025 - Jun 2025
+✓ Built scalable REST and GraphQL APIs using Node.js, NestJS, and TypeScript with modular architecture
+✓ Designed and optimized databases using PostgreSQL, Prisma, and MongoDB, focusing on schema design,
+indexing, and performance.
+✓ Implemented secure authentication and authorization using JWT, OAuth, sessions, and bcrypt, enforcing
+role-based access control and validation across scalable backend services.
+✓ Delivered production-ready full-stack applications by integrating React.js with backend APIs, supported by
+scalable CI/CD pipelines, automated testing, and reliable cloud deployments.
+VigyanSoft - Software Engineer (Full-Stack) Dec 2024 - Jun 2025
+✓ Collaborated with a 5-member team to improve the company’s website using the MERN stack.
+✓ Worked with 3 global clients to build tailored web solutions, improving engagement and results.
+✓ Freelanced to develop and manage web solutions, implementing AWS cloud services to improve scalability and
+security by 30%, and executing SEO strategies that increased organic traffic by 40%.
+
+
 achievement and Interests
 → Solved 700+ LeetCode problems (Rating: 1800+, Top 9%) and 800+ DSA problems across platforms like GFG,
 HackerRank and Codeforces. - Link
