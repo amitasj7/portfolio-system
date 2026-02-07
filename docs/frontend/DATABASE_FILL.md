@@ -117,6 +117,12 @@ VigyanSoft - Software Engineer (Full-Stack) Dec 2024 - Jun 2025
 security by 30%, and executing SEO strategies that increased organic traffic by 40%.
 
 
+
+• Indian Institute of Information Technology, Ranchi (IIITR) Dec 2021 - June 2025
+B.tech(Hons) in Computer Science and Engineering (CGPA: 9.01)
+• Little Children Montesari School (LCM) 2020, 2018
+Board of Secondary Education, Rajasthan Senior Secondary XII : 82%, Secondary X : 95%
+
 achievement and Interests
 → Solved 700+ LeetCode problems (Rating: 1800+, Top 9%) and 800+ DSA problems across platforms like GFG,
 HackerRank and Codeforces. - Link

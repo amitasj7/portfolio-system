@@ -164,3 +164,21 @@ the design of case study page is not good.
     - it's a md file content. so design it.
 
 - - give me best 2 design solution for this.
+
+
+# timeline field - 
+
+in admin/timeline page when:
+  - i upload data, then it's show correct.
+  - sort with time 
+  - pin
+  welldone
+
+problem: public/timeline page
+    - i want simillar show data as admin/timeline page.
+    
+    
+i think that featured engineering section is not complete
+- what card show
+- content, tech, image or links
+- what is your opnion tell me ?
