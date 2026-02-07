@@ -101,7 +101,7 @@ PHASE 4 — PRE-DEPLOYMENT CHECKLIST (CRITICAL)
 │  └─ Reasonable bundle size
 │
 ├─ Security basics
-│  ├─ Auth flows verified
+│  ├─ Auth flows verified 
 │  ├─ Rate limits (if applicable)
 │  ├─ Input validation
 │  └─ Dependency audit
@@ -227,3 +227,71 @@ FINAL INDUSTRY TRUTHS (MEMORIZE)
 └─ A calm deploy is a successful deploy
 
 ================================================================
+
+## DEMO MODE (Local Tunnel via ngrok)
+
+If you need to demo the project to a client from your local machine, use the integrated Demo Mode:
+
+1. **Start ngrok tunnels**:
+   - Backend: `ngrok http 5000`
+   - Frontend: `ngrok http 3000`
+
+2. **Run Demo Setup**:
+   Use the helper script in the root directory to sync the tunnels:
+   ```bash
+   npm run demo:setup <backend_ngrok_url> <frontend_ngrok_url>
+   ```
+
+ Backend:  https://5cbe-110-235-234-45.ngrok-free.app -> http://localhost:5000
+ Frontend: https://646c-110-235-234-45.ngrok-free.app -> http://localhost:3000
+
+3. **Launch Apps**:
+   - `npm run backend:dev`
+   - `npm run frontend:dev`
+
+This ensures the frontend talks to the correct backend tunnel and handles CORS correctly.
+
+================================================================
+
+Failed to fetch
+src/lib/api.ts (23:28) @ apiRequest
+
+
+  21 |     }
+  22 |
+> 23 |     const response = await fetch(`${API_URL}${endpoint}`, config);
+     |                            ^
+  24 |
+  25 |     if (!response.ok) {
+  26 |         const errorData = await response.json().catch(() => ({}));
+Call Stack
+50
+
+Show 46 ignore-listed frame(s)
+apiRequest
+src/lib/api.ts (23:28)
+Object.getProjects
+src/services/public.service.ts (146:26)
+
+> **Troubleshooting:** This error occurs because the development servers have not been restarted to load the new environment variables. Please restart both servers (`npm run dev`) to fix it.
+
+
+present: 
+   app working is fine in normal mode.
+   when i try to open in incognito mode it is not working.
+   
+   console log:
+      
+Access to fetch at 'https://5cbe-110-235-234-45.ngrok-free.app/api/v1/settings' from origin 'https://646c-110-235-234-45.ngrok-free.app' has been blocked by CORS policy: The value of the 'Access-Control-Allow-Origin' header in the response must not be the wildcard '*' when the request's credentials mode is 'include'.Understand this error
+api.ts:23  GET https://5cbe-110-235-234-45.ngrok-free.app/api/v1/settings net::ERR_FAILED 200 (OK)
+      
+### [UX Improvement] Auto-Scroll Interaction
+
+**Changelog:**
+- **Loading State:** The site now shows a dedicated "Initializing Experience" loading screen until all profile data is fetched and assets are ready (minimum 2 seconds).
+- **Auto-Scroll:** Once loaded, the page automatically smooth-scrolls to the Hero Card (lock phase) over 2 seconds.
+- **Interaction Lock:** User scrolling is disabled (`overflow: hidden`) during the loading and auto-scroll phases to ensure the cinematic entry is not interrupted.
+- **Result:** This solves the issue of the empty 3D space appearing broken before the user manually scrolls.
+
+**Status:** `[COMPLETED]`
+
