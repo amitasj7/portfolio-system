@@ -182,3 +182,33 @@ i think that featured engineering section is not complete
 - what card show
 - content, tech, image or links
 - what is your opnion tell me ?
+
+when mobile view - 
+        - [x] when i hover menu button, header should be open.
+        - [x] currently, it's not open. (Fixed)
+
+after i click on "music" and "3d effect" button
+present: 
+     - [x] when i refresh tab, both button are deactivated. (Fixed)
+
+update:
+    - [x] when i refresh tab, both button should be activated. (Implemented via localStorage)
+    - [x] song start where i left it. (Implemented via localStorage)
+    - [x] 3d start where i left it. (Implemented via localStorage)
+
+give me your sugggestion, how i can achiever this feature.
+
+local storage save this data - 
+music_is_playing	true
+music_current_time	96.271118
+galaxy_3d_active	true
+
+before refreshing tab:
+           music_is_playing	true
+           
+after refresh tab:
+           music_is_playing	false : problem
+
+update: 
+      - [x] after refreshing tab, music_is_playing should be true. (Fixed via global interaction listener)
+
